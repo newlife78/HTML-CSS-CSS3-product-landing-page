@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 15px;
+}
+
+header {
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+#header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #000;
+  opacity: 0.7;
+  padding: 1px 5px 1px 1px;
+}
+
+#header-img {
+  width: 6vw;
+  height: 2.4vw;
+  filter: invert(100%);
+  opacity: 0.7;
+}
+
+#header-img-caption {
+  padding-left: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  padding-left: 10px;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav li {
+  padding: 0px 20px;
+}
+
+/* CSS style for anchor links */
+nav li:last-child {
+  padding-right: 0;
+}
+
+.nav-link:hover {
+  background-color: #000;
+  border-radius: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #fff;
+}
+/* end of CSS style for anchor links */
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 200px 25px 200px;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+input {
+  margin: 20px 0 0 0;
+  padding: 5px 45px;
+}
+
+#submit:hover,
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#submit,
+button {
+  background-color: #ffa500;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.025rem;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.feature-container {
+  display: grid;
+  grid-template-columns: minmax(70px, 10%) 90%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px 30px;
+  align-items: center;
+  margin: auto;
+  padding: 50px 200px 25px 200px;
+}
+
+.icon {
+  color: #ffa500;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.materials,
+.shipping,
+.quality,
+.guaranteed-satisfaction {
+  justify-self: start;
+}
+
+.feature-container h2 {
+  margin-top: 10px;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.5em;
+}
+
+#how-it-works {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 200px 25px 200px;
+}
+
+#video {
+  width: 560px;
+  height: 315px;
+  max-width: 640px;
+  max-height: 360px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 50px 200px 25px 200px;
+}
+
+#modern-racquet-product,
+#control-racquet-product,
+#power-racquet-product {
+  background-color: #fffdfa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+  margin: 0 10px;
+  padding: 20px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.product-container li {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+footer {
+  background-color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px 20px;
+  font-size: 0.75rem;
+}
+
+#copyright-notes {
+  padding: 5px 0px;
+  font-style: italic;
+}
+
+/* media queries*/
+@media (max-width: 480px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  header,
+  footer {
+    padding: 10px 5px;
+  }
+
+  #header-img-caption {
+    padding-left: 5px;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
+  #nav-bar > ul > li {
+    font-size: 0.8em;
+  }
+
+  h2,
+  p {
+    font-size: 0.8em;
+  }
+
+  #submit,
+  button {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+  }
+
+  #form {
+    padding: 50px 5px 10px 5px;
+  }
+
+  .feature-container,
+  #how-it-works,
+  .product-container {
+    padding: 35px 5px 10px 5px;
+  }
+
+  .icon {
+    font-size: 1.75em;
+  }
+
+  #video {
+    width: 90%;
+  }
+
+  .product-container {
+    flex-wrap: wrap;
+  }
+
+  #modern-racquet-product,
+  #control-racquet-product,
+  #power-racquet-product {
+    width: 150px;
+    height: 175px;
+    margin: 5px;
+    padding: 10px 15px;
+  }
+
+  .product-container ul li {
+    font-size: 0.7em;
+  }
+
+  #copyright-notes {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav-bar > ul > li {
+    font-size: 0.85em;
+  }
+
+  h2,
+  p {
+    font-size: 0.85em;
+  }
+
+  input {
+    margin: 10px 0 0 0;
+    padding: 5px 10px;
+  }
+
+  #submit,
+  button {
+    font-size: 0.85em;
+  }
+
+  #form {
+    padding: 50px 10px 10px 10px;
+  }
+
+  .feature-container,
+  #how-it-works,
+  .product-container {
+    padding: 35px 10px 10px 10px;
+  }
+
+  .feature-container {
+    grid-template-columns: minmax(35px, 10%) 85%;
+    grid-gap: 10px 20px;
+  }
+
+  .icon {
+    font-size: 2.25em;
+  }
+
+  #modern-racquet-product,
+  #control-racquet-product,
+  #power-racquet-product {
+    width: 175px;
+    height: 200px;
+    padding: 10px 20px;
+  }
+
+  .product-container ul li {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 1.1em;
+  }
+
+  #submit,
+  button {
+    font-size: 0.95em;
+  }
+
+  #form {
+    padding: 65px 30px 15px 30px;
+  }
+
+  .feature-container,
+  #how-it-works,
+  .product-container {
+    padding: 40px 30px 15px 30px;
+  }
+}
